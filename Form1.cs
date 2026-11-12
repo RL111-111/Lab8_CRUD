@@ -273,8 +273,10 @@ namespace Lab8_CRUD
 
                         File.WriteAllText(sfd.FileName, sb.ToString(), Encoding.UTF8);
                         UpdateStatus("Данные экспортированы в CSV");
+
                         MessageBox.Show("Файл успешно сохранён!", "Экспорт завершён", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
                     catch (Exception ex)
                     {
                         MessageBox.Show("Ошибка при экспорте: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -288,7 +290,7 @@ namespace Lab8_CRUD
         {
             ClearFields();
             LoadStudents();
-            UpdateStatus("Изменения отменены, таблица обновлена");
+            UpdateStatus("Изменения отменены, таблица обновлена.");
         }
     }
 }
